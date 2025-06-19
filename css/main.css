@@ -1,0 +1,489 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+#content {
+    width: 1920px;
+    margin: auto;
+}
+#content .con1 {
+    position: relative;
+    width: 1920px;
+    height: 845px;
+    flex-wrap: wrap;
+}
+#content .con1 > h2 {
+    position: absolute;
+    top: 240px;
+    left: 700px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+#content .con1 > h2 span {
+    background: linear-gradient(90deg, #ffffff, #e6002e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#content .bgvideo {
+    position: relative;
+    width: 1920px;
+    height: 845px;
+}
+#content .bgvideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+#content .con1 h2 > img {
+    width: 130x;
+    height: 78px;
+    position: absolute;
+    top: -100px;
+    left: 200px;
+}
+#content .con1 .info {
+    position: absolute;
+    top: 650px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+#content .bgvideo .play {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#content .bgvideo .play.on {
+    transition: 0.3s ease;
+    opacity: 0;
+}
+#content .bgvideo .play:hover {
+    opacity: 1;
+}
+#content .con1 .info .clip {
+}
+#content .con1 .info .clip h2 {
+    margin-top: 5px;
+    width: 70px;
+    height: 31zpx;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #1680ef 0%, #e31a96 100%);
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#content .con1 .info .clip .cliptitle {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.ellipsis {
+    font-size: 21px;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    width: 350px;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+#content .con1 .info .desc {
+    color: rgb(207, 207, 207);
+    font-size: 12px;
+    line-height: 1.8;
+    width: 350px;
+}
+#content .con1 .info p {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: white;
+    cursor: pointer;
+}
+#content .con1 .nowplay {
+    width: 100%;
+    background-color: #222;
+    position: relative;
+
+    height: 50px;
+    z-index: 1;
+    display: flex;
+}
+#content .con1 .nowplay .nowplaytxt {
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 20px;
+    display: flex;
+}
+#content .con1 .nowplay .nowplaytxt span {
+    border-radius: 10px;
+    padding: 0px 10px;
+    background: rgb(102, 102, 102);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+}
+.heart-float {
+    position: absolute;
+    font-size: 20px;
+    color: #ff3a3a;
+    user-select: none;
+    pointer-events: none;
+    animation: floatUp 1s forwards;
+    transform: translateX(-50%);
+    z-index: 1000;
+    left: 0;
+    top: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-100px);
+    }
+}
+
+/* 버튼 위치 기준 relative로 잡아줌 */
+.nowplaytxt {
+    position: relative;
+}
+
+#content .con1 .nowplay .nowplaytxt span > i {
+    color: #ff3a3a;
+    font-weight: 400;
+}
+#content .con1 .nowplay .nowplaytxt h2 {
+    display: block;
+}
+#content .con1 .nowplay .nowplaytxt h2 > strong:nth-of-type(1) {
+    margin-right: 30px;
+}
+#content .con1 .nowplay .nowplaytxt h2 > strong:nth-of-type(2) {
+    margin-left: 30px;
+}
+#content .con1 .nowplay .nowplaytxt h2 > span {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+    background: rgb(102, 102, 102);
+}
+#content .con1 .nowplay .nowplaytxt h3 {
+    display: block;
+}
+/* 콘 1 끝 */
+
+.con2 {
+}
+.con2 .inner {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con2 .inner .scheadule {
+    margin-top: 120px;
+}
+.con2 .inner .scheadule > h2 {
+    background: linear-gradient(90deg, #1680ef 0%, #e31a96 100%);
+    font-weight: 800;
+    font-size: 60px;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+}
+.con2 .inner .scheadule > h2 > span {
+    font-size: 80px;
+}
+.con2 .inner .scheadule .pointbox {
+    position: relative;
+    margin-top: 80px;
+    width: 1100px;
+    height: 285px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 20px 40px rgba(255, 128, 128, 0.3);
+}
+.con2 .inner .scheadule .pointbox .txt {
+    width: 1000px;
+    align-items: center;
+    margin: 0px auto;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 25px;
+}
+.con2 .inner .scheadule .pointbox .txt h2 {
+    display: flex;
+    justify-content: space-between;
+}
+.con2 .inner .scheadule .pointbox .txt h2 > span {
+    font-size: 20px;
+    color: #1b1b1b;
+}
+.con2 .inner .scheadule .pointbox .txt h2 i {
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #1b1b1b;
+}
+.con2 .inner .scheadule .pointbox .txt h2 i:nth-of-type(1):hover {
+    transition: 0.2s ease;
+    background: linear-gradient(270deg, #ffffff, #e6002e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.con2 .inner .scheadule .pointbox .txt h2 i:nth-of-type(2):hover {
+    transition: 0.2s ease;
+    background: linear-gradient(90deg, #ffffff, #e6002e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.con2 .inner .scheadule .pointbox .txt p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1b1b1b;
+}
+
+.con2 .inner .scheadule .pointbox .teambox {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    font-size: 90px;
+
+    font-weight: 600;
+}
+.con2 .inner .scheadule .pointbox .teambox h2 {
+    text-align: center;
+    transform: translateX(15%);
+    color: #696969;
+    font-weight: 600;
+}
+.con2 .inner .scheadule .pointbox .teambox h2 > span {
+    color: #a8a8a8;
+}
+.con2 .inner .scheadule .pointbox .teambox h2 > strong {
+    font-weight: 500;
+    color: #696969;
+}
+.con2 .inner .scheadule .pointbox .teambox span {
+    color: #696969;
+}
+.con2 .inner .scheadule .pointbox .teambox .left {
+    display: flex;
+}
+.con2 .inner .scheadule .pointbox .teambox .left h2 > span {
+    color: #2b2b2b;
+    font-size: 35px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.con2 .inner .scheadule .pointbox .teambox .left img {
+    width: 183px;
+    height: 165px;
+    object-fit: contain;
+}
+
+.con2 .inner .scheadule .pointbox .teambox .right {
+    display: flex;
+}
+.con2 .inner .scheadule .pointbox .teambox .right img {
+    width: 183px;
+    height: 165px;
+    object-fit: contain;
+}
+.con2 .inner .scheadule .pointbox .teambox .right h2 > span {
+    color: #2b2b2b;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+.con2 .inner .scheadule .pointbox .teambox > h3 {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 25px;
+    font-size: 15px;
+    border-radius: 20px;
+    background: #636363;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.con2 .inner .scheadule .pointbox .teambox > h3:hover {
+    background: linear-gradient(90deg, #1680ef 0%, #e31a96 100%);
+    color: #1a1a1a;
+}
+.con2 .inner .desc {
+    position: relative;
+    margin-top: 40px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con2 .inner .scheadule .desc .parking {
+    width: 500px;
+    height: 178px;
+    border-radius: 30px;
+    background-image: url(../image/parking.png);
+    background-position: 0, 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.con2 .inner .scheadule .desc .parking .parkingtext {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin-left: 30px;
+    flex-direction: column;
+}
+.con2 .inner .scheadule .desc .parking .parkingtext > span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff3131;
+}
+.con2 .inner .scheadule .desc .parking .parkingtext > h2 {
+    font-size: 23px;
+    font-weight: 500;
+}
+.con2 .inner .scheadule .desc .parking .parkingtext > strong {
+    padding-top: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.con2 .inner .scheadule .desc .parking .parkingtext > strong:hover {
+    transition: 0.2s ease;
+    background: linear-gradient(90deg, #1680ef 0%, #e31a96 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.con2 .inner .scheadule .desc .ranking {
+}
+.con2 .inner .scheadule .desc .ranking {
+    width: 540px;
+    height: 178px;
+    background: linear-gradient(270deg, #fff7e6 0%, #ffd8a8 30%, #ffb3c1 60%, #ff758f 100%);
+    border-radius: 30px;
+    margin-bottom: 150px;
+}
+.con2 .inner .scheadule .desc .ranking .ranktext strong {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+.con2 .inner .scheadule .desc .ranking > img {
+    width: 182px;
+    height: 122px;
+    object-fit: contain;
+    position: absolute;
+    top: 25px;
+    left: 360px;
+}
+.con2 .inner .scheadule .desc .ranking .ranktext {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    color: white;
+    flex-direction: column;
+}
+.con2 .inner .scheadule .desc .ranking strong {
+    font-size: 13px;
+    font-weight: 400;
+    color: #8a8a8a;
+    position: relative;
+}
+.con2 .inner .scheadule .desc .ranking strong::after {
+    content: '';
+    width: 2px;
+    height: 40px;
+    background: #fffbca;
+    border-radius: 50%;
+    position: absolute;
+    top: 68px;
+    left: 93px;
+}
+.con2 .inner .scheadule .desc .ranking h2 {
+    margin-right: 10px;
+    font-size: 72px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.con2 .inner .scheadule .desc .ranking h2 span:nth-of-type(2) {
+    font-size: 18px;
+    font-weight: 500;
+}
+.con2 .inner .scheadule .desc .ranking p {
+    font-weight: 600;
+    font-size: 24px;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+}
+.con2 .inner .scheadule .desc .ranking p > span {
+    font-size: 14px;
+}

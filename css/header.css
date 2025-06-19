@@ -1,0 +1,95 @@
+#wrap {
+    width: 100%;
+    box-sizing: border-box;
+}
+.inner {
+    box-sizing: border-box;
+    position: relative;
+    width: 1700px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+#header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100px;
+    z-index: 1;
+}
+
+#header .inner {
+    width: 100%;
+    height: 100px;
+    background: #000;
+}
+
+#header h1 {
+    justify-content: left;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    margin-left: 50px;
+}
+#header h1 img {
+    width: 250px;
+    height: 60px;
+    object-fit: contain;
+}
+#header .nav {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header .nav .gnb {
+    display: flex;
+}
+#header .nav .gnb > li {
+    position: relative;
+}
+#header .nav .gnb .nav {
+    justify-content: center;
+    align-items: center;
+}
+#header .nav .gnb li {
+    margin-bottom: 50px;
+}
+#header .nav .gnb li a {
+    font-size: 17px;
+    font-weight: 600;
+    display: inline-flex;
+    width: 130px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    white-space: nowrap;
+    color: #ffffff;
+}
+#header .nav .gnb li a:hover {
+    background: linear-gradient(0deg, #ffffff, #e6002e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#header .utill {
+    display: flex;
+    position: absolute;
+    top: 38px;
+    right: 0;
+    transform: translateX(-50%);
+}
+#header .utill li {
+    margin-right: 30px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#header .utill li > img {
+    display: flex;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    transform: translateX(50%);
+}
