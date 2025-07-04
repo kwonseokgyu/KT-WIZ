@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        homeimg: './image/1x/Asset 1.png',
+        homeimg: '/image/1x/Asset 1.png',
         awayimg: './image/1x/kia.png',
         date: '2025.06.19',
         location: '수원 18:00',
@@ -12,7 +12,7 @@ export default [
     },
     {
         id: 2,
-        homeimg: './image/1x/Asset 1.png',
+        homeimg: '/image/1x/Asset 1.png',
         awayimg: './image/nc1.png',
         date: '2025.06.18',
         location: '수원 15:00',
@@ -24,7 +24,7 @@ export default [
     {
         id: 3,
         homeimg: './image/SSG.png',
-        awayimg: './image/1x/Asset 1.png',
+        awayimg: '/image/1x/Asset 1.png',
         date: '2025.06.17',
         location: '인천 17:00',
         homename: 'SSG',
