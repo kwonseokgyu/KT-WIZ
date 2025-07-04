@@ -22,7 +22,7 @@ body {
     font-weight: 600;
     z-index: 1;
     opacity: 0;
-    animation: fadeInDown 1s ease-out forwards;
+    animation: fadeInOut 4s ease-in-out forwards;
 }
 
 #content .con1 > h2 span {
@@ -31,14 +31,22 @@ body {
     color: transparent;
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInOut {
     0% {
         opacity: 0;
         transform: translateY(-30px);
     }
-    100% {
+    30% {
         opacity: 1;
         transform: translateY(0);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
     }
 }
 #content .bgvideo {
@@ -54,7 +62,7 @@ body {
 }
 
 #content .con1 h2 > img {
-    width: 130x;
+    width: 130px;
     height: 78px;
     position: absolute;
     top: -100px;
@@ -93,7 +101,7 @@ body {
 #content .con1 .info .clip h2 {
     margin-top: 5px;
     width: 70px;
-    height: 31zpx;
+    height: 30px;
     border-radius: 20px;
     background: linear-gradient(90deg, #1680ef 0%, #e31a96 100%);
     text-align: center;
@@ -101,6 +109,11 @@ body {
     color: white;
     margin-bottom: 10px;
     margin-left: 10px;
+}
+#content .con1 .info .clip h2 > span {
+    position: absolute;
+    top: 7px;
+    left: 17px;
 }
 #content .con1 .info .clip .cliptitle {
     display: block;
@@ -134,31 +147,39 @@ body {
     cursor: pointer;
 }
 #content .con1 .nowplay {
+    position: relative;
     width: 100%;
     background-color: #222;
-    position: relative;
-
-    height: 50px;
+    height: 70px;
     z-index: 1;
-    display: flex;
 }
+
 #content .con1 .nowplay .nowplaytxt {
-    width: 600px;
-    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
     color: #ffffff;
     font-size: 20px;
-    display: flex;
+    gap: 20px;
+}
+#content .con1 .nowplay .nowplaytxt p > span {
+    font-size: 20px;
 }
 #content .con1 .nowplay .nowplaytxt span {
     border-radius: 10px;
     padding: 0px 10px;
     background: rgb(102, 102, 102);
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     font-size: 15px;
+}
+#content .con1 .nowplay .nowplaytxt span i {
+    margin-left: 5px;
 }
 .heart-float {
     position: absolute;
@@ -184,7 +205,6 @@ body {
     }
 }
 
-/* 버튼 위치 기준 relative로 잡아줌 */
 .nowplaytxt {
     position: relative;
 }
@@ -192,6 +212,10 @@ body {
 #content .con1 .nowplay .nowplaytxt span > i {
     color: #ff3a3a;
     font-weight: 400;
+}
+#content .con1 .nowplay .nowplaytxt p span {
+    background: none;
+    padding: 0;
 }
 #content .con1 .nowplay .nowplaytxt h2 {
     display: block;
@@ -206,18 +230,21 @@ body {
     width: 100px;
     height: 50px;
     border-radius: 10px;
-    padding: 0px 10px;
+    padding: 2px 10px;
     font-size: 15px;
     background: rgb(102, 102, 102);
 }
 #content .con1 .nowplay .nowplaytxt h3 {
     display: block;
+    font-weight: 600;
 }
+
 /* 콘 1 끝 */
 
 .con2 {
 }
 .con2 .inner {
+    margin-top: 100px;
     width: 100%;
     background: #ffffff;
     display: flex;
@@ -225,10 +252,10 @@ body {
     align-items: center;
 }
 .con2 .inner .scheadule {
-    margin-top: 120px;
+    margin-top: 130px;
 }
 .con2 .inner .scheadule > h2 {
-    background: linear-gradient(90deg, #1680ef 0%, #e31a96 100%);
+    background: linear-gradient(90deg, #f69cb4, #d7a4e7, #aab8ee, #85d6e8);
     font-weight: 800;
     font-size: 60px;
     -webkit-background-clip: text;
@@ -246,8 +273,10 @@ body {
 .con2 .inner .scheadule .pointbox {
     position: relative;
     margin-top: 80px;
+    justify-content: center;
     width: 1100px;
     height: 285px;
+    box-sizing: border-box;
     background: white;
     border-radius: 50px;
     box-shadow: 0 20px 40px rgba(255, 128, 128, 0.3);
@@ -298,14 +327,18 @@ body {
     width: 1000px;
     display: flex;
     justify-content: space-between;
-    margin: 20px auto;
+    box-sizing: border-box;
+    margin: 10px auto;
+    flex-shrink: 0;
     font-size: 90px;
-
     font-weight: 600;
+    position: relative;
 }
-.con2 .inner .scheadule .pointbox .teambox h2 {
+.con2 .inner .scheadule .pointbox .teambox > h2 {
+    position: absolute;
+    top: 0;
+    right: 435px;
     text-align: center;
-    transform: translateX(15%);
     color: #696969;
     font-weight: 600;
 }
@@ -317,16 +350,19 @@ body {
     color: #696969;
 }
 .con2 .inner .scheadule .pointbox .teambox span {
+    box-sizing: border-box;
     color: #696969;
 }
 .con2 .inner .scheadule .pointbox .teambox .left {
+    box-sizing: border-box;
     display: flex;
 }
 .con2 .inner .scheadule .pointbox .teambox .left h2 > span {
+    display: inline-block;
+    width: 95px;
     color: #2b2b2b;
     font-size: 35px;
     font-weight: 600;
-    margin-right: 20px;
 }
 .con2 .inner .scheadule .pointbox .teambox .left img {
     width: 183px;
@@ -350,7 +386,7 @@ body {
 }
 .con2 .inner .scheadule .pointbox .teambox > h3 {
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -392,7 +428,6 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-
     margin-left: 30px;
     flex-direction: column;
 }
@@ -423,7 +458,7 @@ body {
     height: 178px;
     background: linear-gradient(270deg, #fff7e6 0%, #ffd8a8 30%, #ffb3c1 60%, #ff758f 100%);
     border-radius: 30px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 }
 .con2 .inner .scheadule .desc .ranking .ranktext strong {
     font-weight: 600;
@@ -486,4 +521,348 @@ body {
 }
 .con2 .inner .scheadule .desc .ranking p > span {
     font-size: 14px;
+}
+/* 콘2끝 */
+.con3 {
+}
+.con3 .inner {
+    margin-top: 100px;
+    width: 100%;
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.con3 .inner > h2 {
+    background: linear-gradient(90deg, #e60012, #f69cb4, #ffffff);
+    font-weight: 800;
+    font-size: 60px;
+    -webkit-background-clip: text;
+    color: transparent;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.con3 .inner .wizbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.con3 .inner .wizbox .leftwiz {
+    width: 800px;
+}
+.con3 .inner .wizbox .leftwiz .wizvideo {
+    width: 544px;
+    z-index: 30;
+    height: 306px;
+}
+.con3 .inner .wizbox .leftwiz .videolist {
+    display: flex;
+}
+
+.con3 .inner .wizbox .leftwiz > p {
+    position: absolute;
+    top: 50%;
+    left: 28.5%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+.con3 .inner .wizbox .leftwiz > p button {
+    pointer-events: all;
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+.con3 .inner .wizbox .leftwiz > p button i {
+    font-size: 50px;
+    transition: 0.3s linear;
+}
+.con3 .inner .wizbox .leftwiz > p button i:hover {
+    transform: scale(1.2);
+    color: #e6002e;
+}
+.con3 .inner .wizbox .leftwiz .videobox h2 {
+    position: relative;
+    margin-top: 8px;
+}
+.con3 .inner .wizbox .leftwiz .videobox h2 > strong {
+    margin-top: 5px;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #1680ef 0%, #e31a96 100%);
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: white;
+    margin-bottom: 10px;
+}
+.con3 .inner .wizbox .leftwiz .videobox h2 > span {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.con3 .inner .wizbox .leftwiz .videobox i {
+    position: absolute;
+    bottom: 37px;
+    left: 800px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.con3 .inner .wizbox .leftwiz .videobox i:hover {
+    transform: scale(1.2);
+    color: #e6002e;
+}
+.con3 .inner .wizbox .leftwiz .videobox > h3 > span {
+    display: block;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.more-tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.con3 .inner .wizbox .rightwiz {
+    width: 544px;
+    position: relative;
+}
+.con3 .inner .wizbox .rightwiz .board::after {
+    content: '';
+    top: 0;
+    left: -24%;
+    width: 6px;
+    border-radius: 50px;
+    height: 350px;
+    position: absolute;
+    background-color: #ececec;
+}
+.con3 .inner .wizbox .rightwiz .board {
+}
+.con3 .inner .wizbox .rightwiz .board dt {
+    font-weight: 600;
+    margin-top: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.con3 .inner .wizbox .rightwiz .board dt > span {
+    color: #ff8b8b;
+}
+.con3 .inner .wizbox .rightwiz .board dt:first-of-type {
+    margin-top: 0;
+}
+
+.con3 .inner .wizbox .rightwiz .board dt:nth-of-type(2) > strong {
+    background: url('../image/militeru.jpg') no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center;
+    font-weight: 600;
+}
+.con3 .inner .wizbox .rightwiz .board dd {
+    font-size: 10;
+    font-weight: 300;
+    width: 400px;
+    border-bottom: 2px solid #dfdfdf;
+}
+/* con3 끝 */
+.con4 {
+}
+.con4 .inner {
+    margin-top: 100px;
+    width: 100%;
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+.con4 .inner > h2 {
+    background: linear-gradient(90deg, #f69cb4, #d7a4e7, #aab8ee, #85d6e8);
+    font-weight: 800;
+    font-size: 60px;
+    -webkit-background-clip: text;
+    color: transparent;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.con4 .inner .wizgallery {
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: 1400px;
+    justify-content: space-between;
+}
+.con4 .inner .wizgallery .bigimg img {
+    box-shadow: 0 20px 40px rgba(255, 128, 128, 0.3);
+}
+.con4 .inner .wizgallery img {
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.con4 .inner .wizgallery .leftimg img {
+    width: 350px;
+    height: 400px;
+    opacity: 0.3;
+}
+.con4 .inner .wizgallery .rightimg img {
+    width: 350px;
+    height: 400px;
+    opacity: 0.3;
+}
+.con4 .inner .wizgallery p {
+    display: flex;
+    justify-content: space-between;
+    width: 580px;
+    top: 40%;
+    right: 50%;
+
+    position: absolute;
+    transform: translate(50%, 50%);
+}
+.con4 .inner .wizgallery p button {
+    background: none;
+    border: none;
+}
+.con4 .inner .wizgallery p i {
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.con4 .inner > button {
+    margin: 50px auto;
+    padding: 0;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s linear;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con4 .inner > button a > span {
+    font-size: 20px;
+    font-weight: 600;
+}
+.con4 .inner > button:hover {
+    transform: scale(1.2);
+}
+/* 콘4끝  */
+/* 콘5시작*/
+.con5 {
+}
+.con5 .inner {
+    margin-top: 100px;
+    width: 100%;
+    background: #ffffff;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.con5 .inner .MDSHOP {
+    position: relative;
+    margin-right: 50px;
+    width: 600px;
+    height: 300px;
+
+    border-radius: 50px;
+    background-image: url(../image/store.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+.con5 .inner .MDSHOP h2 {
+}
+.con5 .inner .MDSHOP h2 img {
+    width: 200px;
+    height: 138px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+.con5 .inner .MDSHOP h3 {
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.con5 .inner .MDSHOP p {
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}
+.con5 .inner .MDSHOP > span {
+    display: block;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    transition: 0.2s linear;
+}
+
+.con5 .inner .Bestplayer {
+    margin-left: 50px;
+    width: 600px;
+    height: 300px;
+    background-image: url(../image/monthbestplayer1.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    border-radius: 50px;
+}
+.con5 .inner .Bestplayer h2 img {
+    width: 200px;
+    height: 138px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+.con5 .inner .Bestplayer h3 {
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.con5 .inner .Bestplayer p {
+    margin-left: 30px;
+    font-size: 70px;
+    font-weight: 600;
+    color: white;
+}
+.con5 .inner .Bestplayer p > span {
+    color: #e6002e;
+    font-size: 60px;
+    font-weight: 600;
+    margin-right: 20px;
 }
