@@ -24,7 +24,7 @@ export default [
     {
         id: 3,
         homeimg: './image/SSG.png',
-        awayimg: './image/1x/Asset 1.png',
+        awayimg: './image/Asset 1.png',
         date: '2025.06.17',
         location: '인천 17:00',
         homename: 'SSG',
